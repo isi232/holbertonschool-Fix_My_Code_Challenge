@@ -2,13 +2,16 @@
 
 import sys
 
+result = []
 for i in range(1, int(sys.argv[1]) + 1):
     if i % 3 == 0 and i % 5 == 0:
-        print("FizzBuzz", end=" ")
+        result.append("FizzBuzz")
     elif i % 3 == 0:
-        print("Fizz", end=" ")
+        result.append("Fizz")
     elif i % 5 == 0:
-        print("Buzz", end=" ")
+        result.append("Buzz")
     else:
-        print(i, end=" ")
-print()
+        result.append(str(i))
+
+print(" ".join(result))
+
